@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <title>Bubble Sort Visualizer</title>
+</head>
+
+<body onload="generate_graph()">
+  <div class="main_wrapper">
+    <div class="settings">
+      <div class="val_input">
+        <h4>Elements Values:</h4>
+        <p id="elements_val_id"></p>
+        <button onclick="generate_graph()" id="gen_btn_id">Generate</button>
+        <select name="" id="sort_select_id">
+          <option value="">Select Algo</option>
+          <option value="bubble">Bubble Sort</option>
+        </select>
+        <button onclick="visualize_clicked()" id="vis_btn_id">Visualize</button>
+      </div>
+    </div>
+
+    <!--------------------------------------------------->
+    <div class="graph_main_wrapper">
+      <!---------------ORIGINAL Graph-------------->
+      <div class="graph_wrapper">
+        <div class="graph_wrap" id="graph_wrap_id">
+          <div class="graph_bar" id="graph_bar0"></div>
+          <div class="graph_bar" id="graph_bar1"></div>
+          <div class="graph_bar" id="graph_bar2"></div>
+          <div class="graph_bar" id="graph_bar3"></div>
+          <div class="graph_bar" id="graph_bar4"></div>
+          <div class="graph_bar" id="graph_bar5"></div>
+          <div class="graph_bar" id="graph_bar6"></div>
+          <div class="graph_bar" id="graph_bar7"></div>
+          <div class="graph_bar" id="graph_bar8"></div>
+          <div class="graph_bar" id="graph_bar9"></div>
+        </div>
+        <div class="graph_index">
+          <div class="sort_el"></div><span>elements</span>
+          <div class="sort_i"></div><span>ith index element</span>
+          <div class="sort_j"></div><span>jth index element</span>
+        </div>
+      </div>
+      <!----------------------------------------->
+      <!---------------SOURCE CODE---------------->
+      <div class="sourcecode">
+        <h2>Bubble Sort Algorithm</h2>
+        <textarea readonly>
+          for (let i = 0; i < values.length; i++) {
+            for (let j = i + 1; j < values.length; j++) {
+              if (values[i] > values[j]) {
+                let temp = values[i];
+                values[i] = values[j];
+                values[j] = temp; 
+              } 
+            } 
+          } 
+
+
+          Best Case Time complexity = O (N)
+          Avg Case Time complexity = O (N^2)
+          Worst Case Time complexity = O (N^2)
+
+          Space Complexity = O(1)
+        </textarea>
+      </div>
+      <!----------------------------------------->
+    </div>
+  </div>
+  <!--------------------FOOTER------------------->
+  <footer>
+    Designed and Developed By: <a href="https://akashkumargupta.com" target="_blank"> Akash Kumar Gupta</a>
+  </footer>
+  <!--------------------------------------------->
+</body>
+<script>
+  
+</script>
+<script src="main.js"></script>
+</html>
